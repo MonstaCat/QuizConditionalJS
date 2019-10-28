@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan Javascript</title>
+
+    <script>
+
+        function namaProdi() {
+            var prodi = parseInt(document.form1.prodi.value);
+            var nim = document.form1.nim.value;
+            var nama = document.form1.nama.value;
+            var semester = document.form1.semester.value;
+
+            switch (prodi) {
+                case 1:
+                    jurusan = "Teknik Informatika";
+                    break;
+
+                case 2:
+                    jurusan = "Teknik Komputer";
+                    break;
+
+                case 3:
+                    jurusan = "Sistem Informasi";
+                    break;
+
+                case 4:
+                    jurusan = "Teknik Mekatronika";
+                    break;
+
+                case 5:
+                    jurusan = "Akuntansi";
+                    break;
+
+                case 6:
+                    jurusan = "Teknik Elektronika Komunikasi";
+                    break;
+
+                default:
+                    alert("NULL");
+                    break;
+            }
+            alert("NIM: " + nim + "\nNama: " + nama + "\nSemester: " + semester + "\n\nAnda adalah Mahasiswa " +jurusan);
+        }
+
+        function translator() {
+            var hewan = parseInt(document.form2.hewan.value);
+
+            if (hewan == 1) {
+                alert("Cat");
+            } else if (hewan == 2) {
+                alert("Dog");
+            } else if (hewan == 3) {
+                alert("Tiger");
+            } else if (hewan == 4) {
+                alert("Lion");
+            } else if (hewan == 5) {
+                alert("Ant");
+            } else if (hewan == 6) {
+                alert("Horse");
+            } else if (hewan == 7) {
+                alert("Giraffe");
+            } else if (hewan == 8) {
+                alert("Dolphin");
+            } else if (hewan == 9) {
+                alert("Fish");
+            } else if (hewan == 10) {
+                alert("Butterfly");
+            } else {
+                alert("NULL");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p>Silahkan Masukkan Data:</p>
+    <form name="form1">
+        NIM:
+        <br>
+        <input type="text" name="nim" autocomplete="off">
+        <br><br>
+
+        Nama:
+        <br>
+        <input type="text" name="nama" autocomplete="off">
+        <br><br>
+
+        Semester:
+        <br>
+            <select name="semester">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        <br><br>
+        
+        Program Studi:
+        <br>
+        <select name="prodi">
+            <option value="1">Teknik Informatika</option>
+            <option value="2">Teknik Komputer</option>
+            <option value="3">Sistem Informasi</option>
+            <option value="4">Mekatronika</option>
+            <option value="5">Akuntansi</option>
+            <option value="6">Teknik Elektronika Komunikasi</option>
+        </select>
+        <br><br>
+
+        <input type="button" onclick="namaProdi()" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <br>
+    <hr>
+
+    <p>Translator Bahasa Indonesia-Inggris</p>
+    <form name="form2">
+        <select name="hewan">
+            <option value="1">Kucing</option>
+            <option value="2">Anjing</option>
+            <option value="3">Harimau</option>
+            <option value="4">Singa</option>
+            <option value="5">Semut</option>
+            <option value="6">Kuda</option>
+            <option value="7">Jerapah</option>
+            <option value="8">Lumba-Lumba</option>
+            <option value="9">Ikan</option>
+            <option value="10">Kupu-Kupu</option>
+        </select>
+
+        <br><br>
+        <input type="button" onclick="translator()" value="Translate!">
+    </form> 
+
+
+</body>
+
+</html>
